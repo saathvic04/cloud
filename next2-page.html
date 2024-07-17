@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Main heading */
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Flex container for content */
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap; /* Wrap content on smaller screens */
+            gap: 40px;
+            margin-bottom: 20px; /* Optional: Adjust spacing between sections */
+            padding: 0 20px; /* Optional: Add padding for better spacing */
+        }
+
+        /* Image styles */
+        .content img {
+            width: 50%; /* Set image width to 50% of the container */
+            max-width: 300px; /* Limit maximum width */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 20px; /* Optional: Adjust spacing between image and text */
+        }
+
+        /* Content text */
+        .content > div {
+            flex: 1; /* Fill remaining space */
+        }
+
+        .content h2 {
+            margin-top: 0; /* Remove default margin */
+            font-size: large; /* Adjust font size */
+        }
+
+        .content p {
+            margin-top: 0; /* Remove default margin */
+            font-size: medium; /* Adjust font size */
+            line-height: 1.6; /* Improve readability */
+        }
+
+        /* Next button */
+        .next-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            z-index: 10; /* Ensure button is above content */
+        }
+
+        /* Previous button */
+        .previous-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            z-index: 10; /* Ensure button is above content */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .content img {
+                width: 100%; /* Adjust image to full width on smaller screens */
+                margin-right: 0; /* Remove right margin for better spacing */
+                margin-bottom: 20px; /* Add bottom margin for spacing */
+            }
+
+            .content {
+                padding: 0 10px; /* Adjust padding for smaller screens */
+            }
+
+            .next-button,
+            .previous-button {
+                font-size: 14px; /* Adjust font size for smaller screens */
+                padding: 8px 16px; /* Adjust padding for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Continuous Integration/Continuous Deployment (CI/CD)</h1>
+    <div class="content">
+        <img src="https://miro.medium.com/v2/resize:fit:640/0*h-oNfEHFjEB2hOpZ.png" alt="">
+        <div>
+            <h2>Continuous Integration (CI):</h2>
+            <p>Definition: The practice of frequently integrating code changes into a shared repository.</p>
+            <p>Goals: Detect integration issues early, improve collaboration, and automate builds and tests.</p>
+            <p>Tools: Jenkins, Travis CI, CircleCI, GitLab CI/CD.</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Continuous Deployment (CD):</h2>
+        <div>
+            <p>Definition: Automating the deployment process to deliver code changes to production frequently and reliably.</p>
+            <p>Goals: Accelerate time to market, reduce deployment risks, and increase release frequency.</p>
+            <p>Tools: Ansible, Chef, Puppet, Kubernetes (for deployment orchestration).</p>
+        </div>
+    </div>
+    
+    <!-- Next and previous buttons -->
+    <button class="next-button" onclick="window.location.href = 'next2-page.html';">DevOps</button>
+    <button class="previous-button" onclick="window.location.href = 'next1-page.html';">Previous</button>
+</body>
+</html>
